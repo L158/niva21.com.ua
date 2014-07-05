@@ -1843,3 +1843,42 @@
 2014-07-05 14:24:17 - PHP Notice:  Undefined variable: button_compare in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\module\featured.tpl on line 73
 2014-07-05 14:24:17 - PHP Notice:  Undefined variable: button_compare in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\module\featured.tpl on line 73
 2014-07-05 14:24:17 - PHP Notice:  Undefined index: stock in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\module\featured.tpl on line 78
+2014-07-05 18:54:21 - PHP Notice:  Error: Could not load model catalog/filter! in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\system\engine\loader.php on line 48
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:09 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:23 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:55:54 - PHP Notice:  Undefined variable: show_type in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\product\category.php on line 303
+2014-07-05 18:58:55 - PHP Notice:  Error: Table 'db_niva21.oc_category_option' doesn't exist<br />Error No: 1146<br />SELECT COUNT(DISTINCT co.option_id) AS total  FROM oc_category_option co LEFT JOIN oc_category_option_description cod ON (co.option_id = cod.option_id) WHERE cod.language_id = '1' in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\system\database\mysql.php on line 27
+2014-07-05 18:59:03 - PHP Notice:  Error: Table 'db_niva21.oc_category_option' doesn't exist<br />Error No: 1146<br />SELECT COUNT(DISTINCT co.option_id) AS total  FROM oc_category_option co LEFT JOIN oc_category_option_description cod ON (co.option_id = cod.option_id) WHERE cod.language_id = '1' in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\system\database\mysql.php on line 27
