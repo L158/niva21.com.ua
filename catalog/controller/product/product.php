@@ -243,6 +243,18 @@ class ControllerProductProduct extends Controller {
 			$this->data['text_select'] = $this->language->get('text_select');
 			$this->data['text_manufacturer'] = $this->language->get('text_manufacturer');
 			$this->data['text_model'] = $this->language->get('text_model');
+            // Added parameter article
+            $this->data['text_sku'] = $this->language->get('text_sku');
+            // Added parameter article
+            // Added parameter dimensions            
+            $this->data['length'] = $product_info['length'];
+            $this->data['width'] = $product_info['width'];
+            $this->data['height'] = $product_info['height'];
+            // Added parameter dimensions
+            // Added parameter weight
+            $this->data['weight'] = $product_info['weight'];
+            $this->data['weight_class_id'] = $product_info['weight_class_id'];
+            // Added parameter weight
 			$this->data['text_reward'] = $this->language->get('text_reward');
 			$this->data['text_points'] = $this->language->get('text_points');	
 			$this->data['text_discount'] = $this->language->get('text_discount');
@@ -284,9 +296,19 @@ class ControllerProductProduct extends Controller {
 			$this->data['manufacturer'] = $product_info['manufacturer'];
 			$this->data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$this->data['model'] = $product_info['model'];
+            // Added parameter article
+            $this->data['sku'] = $product_info['sku'];
+            // Added parameter article
+            // Added parameter dimensions
+            $this->data['text_length'] = $this->language->get('text_length');
+            $this->data['text_width'] = $this->language->get('text_width');
+            $this->data['text_height'] = $this->language->get('text_height');           
+            // Added parameter dimensions
+            // Added parameter weight
+            $this->data['text_weight'] = $this->language->get('text_weight');
+            // Added parameter weight
 			$this->data['reward'] = $product_info['reward'];
-			$this->data['points'] = $product_info['points'];
-			
+			$this->data['points'] = $product_info['points'];			
 			if ($product_info['quantity'] <= 0) {
 				$this->data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {

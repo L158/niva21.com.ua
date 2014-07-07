@@ -41,14 +41,19 @@ class ControllerModuleBestSeller extends Controller {
 			}
 							
 			$this->data['products'][] = array(
-				'product_id' => $result['product_id'],
-				'thumb'   	 => $image,
-				'name'    	 => $result['name'],
-				'price'   	 => $price,
-				'special' 	 => $special,
-				'rating'     => $rating,
-				'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+				'product_id'  => $result['product_id'],
+				'thumb'       => $image,
+				'name'        => $result['name'],
+                // Added brand, article, status
+                'manufacturer'=> (empty($result['manufacturer'])) ? '' : $this->language->get('text_manufacturer') .' '. $result['manufacturer'],
+                'sku'         => (empty($result['sku'])) ? '' : $this->language->get('text_sku') .' '. $result['sku'],
+                'stock'       => (empty($result['quantity'])) ? $this->language->get('text_notinstock') : $this->language->get('text_instock'),
+                // Added brand, article, status
+				'price'       => $price,
+				'special'     => $special,
+				'rating'      => $rating,
+				'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
+				'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 			);
 		}
 

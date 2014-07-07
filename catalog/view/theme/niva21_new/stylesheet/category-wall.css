@@ -64,7 +64,8 @@ ul.cat-wall li {
 	margin: 0;
 	padding: 0;
 	border: none;
-
+	float: left;
+	width: 33.3%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;

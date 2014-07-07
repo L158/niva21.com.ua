@@ -70,6 +70,11 @@ class ControllerProductSpecial extends Controller {
    
 		$this->data['text_empty'] = $this->language->get('text_empty');
 		$this->data['text_quantity'] = $this->language->get('text_quantity');
+        // Added text for status
+        $this->data['text_stock'] = $this->language->get('text_stock');
+        $this->data['text_instock'] = $this->language->get('text_instock');
+        $this->data['text_notinstock'] = $this->language->get('text_notinstock');
+        // Added text for status
 		$this->data['text_manufacturer'] = $this->language->get('text_manufacturer');
 		$this->data['text_model'] = $this->language->get('text_model');
 		$this->data['text_price'] = $this->language->get('text_price');
@@ -136,6 +141,11 @@ class ControllerProductSpecial extends Controller {
 				'product_id'  => $result['product_id'],
 				'thumb'       => $image,
 				'name'        => $result['name'],
+                // Added brand, article, status
+                'manufacturer'=> (empty($result['manufacturer'])) ? '' : $this->language->get('text_manufacturer') .' '. $result['manufacturer'],
+                'sku'         => (empty($result['sku'])) ? '' : $this->language->get('text_sku') .' '. $result['sku'],
+                'stock'       => (empty($result['quantity'])) ? $this->language->get('text_notinstock') : $this->language->get('text_instock'),
+                // Added brand, article, status
 				'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 300) . '..',
 				'price'       => $price,
 				'special'     => $special,

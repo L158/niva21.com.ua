@@ -1,4 +1,4 @@
-<?php if ($options) { ?>
+<?php if (isset($options)) { ?>
 
 <div class="box filter">
   <div class="box-heading sprite-icons-v"><?php echo $heading_title; ?></div>

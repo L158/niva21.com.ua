@@ -5,13 +5,24 @@ $_['text_search']       = 'Поиск';
 $_['text_brand']        = 'Производитель';
 $_['text_manufacturer'] = 'Производитель:';
 $_['text_model']        = 'Модель:';
+// Added parameter catalog number
+$_['text_sku'] = 'Артикул:';
+// Added parameter catalog number
+// Added parameter dimensions
+$_['text_length'] = 'Длина:';
+$_['text_width '] = 'Ширина:';
+$_['text_height'] = 'Высота:';
+// Added parameter dimensions
+// Added parameter weight
+$_['text_weight'] = 'Вес:';
+// Added parameter weight
 $_['text_reward']       = 'Бонусные баллы:'; 
 $_['text_points']       = 'Цена в бонусных баллах:';
 $_['text_stock']        = 'Наличие:';
 $_['text_instock']      = 'Есть в наличии';
 $_['text_price']        = 'Цена:'; 
 $_['text_tax']          = 'Без НДС:';
-$_['text_discount']     = '%s или более %s';
+$_['text_discount']     = 'При покупке %s и более: %s';
 $_['text_option']       = 'Доступные варианты';
 $_['text_qty']          = 'Количество:';
 $_['text_minimum']      = 'Минимальное количество заказа этого товара: %s';

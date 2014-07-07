@@ -24,13 +24,51 @@
 	<h1><?php echo $heading_title; ?></h1>
       <div class="description">
         <?php if ($manufacturer) { ?>
-        <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
+        <span><?php echo $text_manufacturer; ?></span>
+        <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
         <?php } ?>
-        <span><?php echo $text_model; ?></span> <?php echo $model; ?><br />
+        <span><?php echo $text_model; ?></span>
+        <?php echo $model; ?>
+        <br />
+        <!-- Added parameter dimensions -->
+        <?php if ($length>0 || $width>0 || $height>0) { ?>
+          <span>Габариты (ДхШхВ): </span>
+          <?php 
+          if ($length>0) { 
+            echo round((float) $length, 2).' см х ';
+          } else {
+            echo '- ';
+          }
+          if ($width>0) { 
+            echo round((float) $width, 2).' см х '; 
+          } else {
+            echo '- ';
+          }
+          if ($height>0) {
+            echo round((float) $height, 2).' см<br />';
+          }  else {
+            echo '-<br />';
+          } ?>
+        <?php } ?>
+        <!-- Added parameter dimensions -->
+        <!-- Added parameter weight -->
+        <?php 
+        if ($weight>0) { ?>
+          <span><?php echo $text_weight; ?></span>
+        <?php echo round((float) $weight, 2);
+          if ($weight_class_id==2) {
+            echo ' гр<br />';
+          }
+          if ($weight_class_id==1) {
+            echo ' кг<br />';
+          }
+        } ?>
+        <!-- Added parameter weight -->        
         <?php if ($reward) { ?>
         <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
         <?php } ?>
-        <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
+        <span><?php echo $text_stock; ?></span> <?php echo $stock; ?>
+      </div>
       <?php if ($price) { ?>
       <div class="price"><?php echo $text_price; ?>
         <?php if (!$special) { ?>
@@ -49,7 +87,7 @@
         <br />
         <div class="discount">
           <?php foreach ($discounts as $discount) { ?>
-          <?php echo sprintf($text_discount, $discount['quantity'], $discount['price']); ?><br />
+          <?php echo sprintf('<div class="discaunt">'.$text_discount, '<span>'.$discount['quantity'].'</span>', '<span>'.$discount['price'].'</span></div>'); ?><br />
           <?php } ?>
         </div>
         <?php } ?>
@@ -207,6 +245,28 @@
           <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
           &nbsp;
           <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
+          <a id="fast_order" href="#fast_order_form" class="button" />Быстрый заказ</a>
+          <div style="display:none">
+            <div id="fast_order_form">
+              <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
+              <input id="product_price" type="hidden" value="<?php echo ($special ? $special : $price); ?>">
+              <div class="fast_order_center"><?php echo $heading_title; ?> — ваш заказ</div>
+              <div class="fast_order_left">
+                <p>Имя:</p>
+                <p>Телефон:</p>
+                <p>Комментарий:</p>
+              </div>
+              <div class="fast_order_right">
+                <p><input type="text" id="customer_name"/></p>
+                <p><input type="text" id="customer_phone"/></p>
+                <p><input type="text" id="customer_message"/></p>
+              </div>
+              <div class="fast_order_center">
+                <p id="fast_order_result">Пожалуйста, укажите ваше имя и телефон, чтобы мы могли связаться с вами</p>
+                <button class="fast_order_button"><span>Оформить заказ</span></button>
+              </div>
+            </div>
+          </div>
           <span>&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;</span>
           <span class="links"><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br />
             <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></span>
@@ -217,7 +277,19 @@
       </div>
       <?php if ($review_status) { ?>
       <div class="review">
-        <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
+        <div>
+          <img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;
+          <a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a>
+        </div>
+        <div>
+          <!-- Added parameter article -->
+          <?php if ($sku) { ?>
+          <span><?php echo $text_sku; ?></span>
+          <?php echo $sku; ?>
+          <?php } ?>
+          <!-- Added parameter article -->
+        </div>
         <div class="share">
 		<!-- AddThis Button BEGIN -->
 			<div class="share42init" data-image="<?php echo $thumb; ?>"></div>

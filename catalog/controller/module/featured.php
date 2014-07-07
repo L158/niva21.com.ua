@@ -50,14 +50,19 @@ class ControllerModuleFeatured extends Controller {
 				}
 					
 				$this->data['products'][] = array(
-					'product_id' => $product_info['product_id'],
-					'thumb'   	 => $image,
-					'name'    	 => $product_info['name'],
-					'price'   	 => $price,
-					'special' 	 => $special,
-					'rating'     => $rating,
-					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']),
-					'href'    	 => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
+					'product_id'  => $product_info['product_id'],
+					'thumb'       => $image,
+					'name'        => $product_info['name'],
+                    // Added brand, article, status
+                    'manufacturer'=> (empty($product_info['manufacturer'])) ? '' : $this->language->get('text_manufacturer') .' '. $product_info['manufacturer'],
+                    'sku'         => (empty($product_info['sku'])) ? '' : $this->language->get('text_sku') .' '. $product_info['sku'],
+                    'stock'       => (empty($result['quantity'])) ? $this->language->get('text_notinstock') : $this->language->get('text_instock'),
+                    // Added brand, article, status
+					'price'       => $price,
+					'special'     => $special,
+					'rating'      => $rating,
+					'reviews'     => sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 				);
 			}
 		}

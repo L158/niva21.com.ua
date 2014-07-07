@@ -11,7 +11,13 @@ $_['text_critea']       = 'Критерии поиска:';
 $_['text_empty']        = 'Нет товаров, которые соответствуют критериям поиска.';
 $_['text_quantity']     = 'Количество:';
 $_['text_manufacturer'] = 'Производитель:';
-$_['text_model']        = 'Модель:'; 
+$_['text_model']        = 'Модель:';  
+// Added brand, article, status
+$_['text_sku']          = 'Каталожный номер:';
+$_['text_stock']        = 'Наличие:';
+$_['text_instock']      = 'Есть в наличии';
+$_['text_notinstock']   = 'Под заказ';
+// Added brand, article, status
 $_['text_points']       = 'Бонусные баллы:'; 
 $_['text_price']        = 'Цена:'; 
 $_['text_tax']          = 'Без НДС:';

@@ -4,11 +4,11 @@
     $customer_name = trim($_POST['customer_name']);
     $customer_phone = trim($_POST['customer_phone']);
     $customer_message = trim($_POST['customer_message']);
-    $mail_subject = "Мой интернет-магазин - быстрый заказ (".date('d.m.Y H:i').")";
+    $mail_subject = "Мой интернет-магазин - предзаказ (".date('d.m.Y H:i').")";
     
     if (isset($customer_name) && $customer_name!=="" && isset($customer_phone) && $customer_phone!=="") {
-      $store_email = "inbox@niva.com.ua";
-      $fast_order_email = "inbox@niva.com.ua";
+      $store_email = "info@mysite.com";
+      $fast_order_email = "fastorder@mysite.com";
       $product_name = iconv("UTF-8", "windows-1251", $product_name);
       $product_price = iconv("UTF-8", "windows-1251", $product_price);
       $subject   = '=?windows-1251?B?'.base64_encode($mail_subject).'?=';
@@ -19,7 +19,7 @@
       $headers = "From: <".$fast_order_email.">\r\n";
       $headers = $headers."Return-path: <".$fast_order_email.">\r\n";
       $headers = $headers."Content-type: text/plain; charset=\"windows-1251\"\r";
-      mail($store_email,$mail_subject,"Быстрый заказ\n\nДата заказа: ".date('d.m.Y H:i')."\nЗаказчик: ".$customer_name."\nТелефон: ".$customer_phone."\nКомментарий: ".$customer_message."\n\nТовар: ".$product_name."\nЦена: ".$product_price,$headers);                               
+      mail($store_email,$mail_subject,"Предзаказ\n\nДата заказа: ".date('d.m.Y H:i')."\nЗаказчик: ".$customer_name."\nТелефон: ".$customer_phone."\nКомментарий: ".$customer_message."\n\nТовар: ".$product_name."\nЦена: ".$product_price,$headers);                               
     } else { 
       echo "empty"; 
     };
