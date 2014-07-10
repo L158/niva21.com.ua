@@ -7,6 +7,7 @@ Desktop.ini
 
 # Folder & file
 nbproject/*
+cache
 cache/*
 cache.*
 

@@ -2097,3 +2097,6 @@
 2014-07-06 18:58:24 - PHP Notice:  Undefined variable: result in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\module\featured.php on line 58
 2014-07-06 18:58:24 - PHP Notice:  Undefined variable: result in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\module\featured.php on line 57
 2014-07-06 18:58:24 - PHP Notice:  Undefined variable: result in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\controller\module\featured.php on line 58
+2014-07-10 7:38:06 - PHP Notice:  Use of undefined constant php - assumed 'php' in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\product\product.tpl on line 275
+2014-07-10 7:39:30 - PHP Notice:  Use of undefined constant php - assumed 'php' in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\product\product.tpl on line 282
+2014-07-10 9:34:46 - PHP Notice:  Use of undefined constant php - assumed 'php' in D:\Works_WWW\OpenServer\domains\localhost\niva21.end\catalog\view\theme\niva21_new\template\product\product.tpl on line 282

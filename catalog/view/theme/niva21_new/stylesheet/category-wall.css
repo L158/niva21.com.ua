@@ -1,12 +1,3 @@
-/*
- * Category Wall v1.0.2
- * for OpenCart 1.5.1 - 1.5.6.4
- *
- * Copyright 2014, iDiY
- * Support: idiy.webmaster@gmail.com
- *
- */
-
 ul.cat-wall, ul.cat-wall ul {
 	position: relative;
 	margin: 0;
@@ -74,10 +65,16 @@ ul.cat-wall li {
 
 ul.cat-wall .sc-items-row > li {
 	float: left;
-	margin: .5%;
-	width: 24%;
+	/* [disabled]margin: 0 10px; */
+	/* [disabled]width: 24%; */
 }
 
+ul.cat-wall .sc-items-row > li:nth-child(3n+1) {
+	margin-right: 10px;
+}
+ul.cat-wall .sc-items-row > li:nth-child(3n+3) {
+	margin-left: 10px;
+}
 ul.cat-wall li a {
 	position: relative;
 	display: block;
@@ -96,15 +93,15 @@ ul.cat-wall li a:hover, ul.cat-wall li a.sc-active,ul.cat-wall li a.active {
 }
 
 ul.cat-wall .sc-items-row > li a {
-	padding: 5%;
+	/* [disabled]padding: 5%; */
 }
 
 ul.cat-wall > .sc-items-row > li a {
-	border: 2px solid rgba(0,0,0,0.05);
+	/* [disabled]border: 2px solid rgba(0,0,0,0.05); */
 }
 
 ul.cat-wall > .sc-items-row > li a:hover {
-	border: 2px solid rgba(0,0,0,0.1);
+	/* [disabled]border: 2px solid rgba(0,0,0,0.1); */
 }
 
 ul.cat-wall .sc-list li a, ul.cat-wall.sc-fixed ul li a {
@@ -114,7 +111,7 @@ ul.cat-wall .sc-list li a, ul.cat-wall.sc-fixed ul li a {
 ul.cat-wall .sc-list li a:before,ul.cat-wall.sc-fixed ul li a:before {
 	margin-right: .2em;
 	color: #777;
-	content: '\00B7';
+	/* [disabled]content: '\00B7'; */
 	vertical-align: middle;
 	font-size: 2em;
 	line-height: 0;
@@ -153,7 +150,8 @@ ul.cat-wall li a.i-toggle.sc-active:after {
 
 ul.cat-wall .sc-name {
 	margin: 5% 0;
-	text-align: center;
+	margin-left: 12px;
+	text-align: left;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -213,8 +211,8 @@ ul.cat-wall .sc-list-view .sc-image-left {
 
 ul.cat-wall img {
 	display: block;
-	margin-right: auto;
-	margin-left: auto;
+	/* [disabled]margin-right: auto; */
+	margin-left: 7px;
 	max-width: 100%;
 	border: 0;
 	vertical-align: middle;
@@ -256,7 +254,8 @@ ul.cat-wall.sc-flyout ul.sc-list-view > div, ul.cat-wall.sc-flyout ul.sc-grid-vi
 
 /* Fixed */
 ul.cat-wall.sc-fixed .sc-items-row {
-	margin: 0;	
+	margin: 0;
+	clear: both;
 }
 
 ul.cat-wall.sc-fixed ul.sc-list-view, ul.cat-wall.sc-fixed ul.sc-grid-view {

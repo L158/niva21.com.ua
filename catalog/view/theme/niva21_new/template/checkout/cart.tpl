@@ -3,7 +3,10 @@
 <div class="attention"><?php echo $attention; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
 <?php if ($success) { ?>
-<div class="success"><?php echo $success; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
+<div class="success">
+  <?php echo $success; ?>
+  <img src="catalog/view/theme/default/image/close.png" alt="" class="close" />
+</div>
 <?php } ?>
 <?php if ($error_warning) { ?>
 <div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
@@ -11,9 +14,17 @@
 <?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
+    <?php 
+    foreach ($breadcrumbs as $i=> $breadcrumb) {
+      echo $breadcrumb['separator']; 
+      if($i+1<count($breadcrumbs)) { 
+    ?>
+    <a href="<?php echo $breadcrumb['href']; ?>" title="Продажа <?php echo $breadcrumb['text']; ?> купить в ГОРОД-СТРАНА цена"><?php echo $breadcrumb['text']; ?></a>
+    <?php 
+      } else { 
+      echo $breadcrumb['text']; 
+      } 
+    } ?>
   </div>
   <h1><?php echo $heading_title; ?>
     <?php if ($weight) { ?>

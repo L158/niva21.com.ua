@@ -1,9 +1,17 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
+    <?php 
+    foreach ($breadcrumbs as $i=> $breadcrumb) {
+      echo $breadcrumb['separator']; 
+      if($i+1<count($breadcrumbs)) { 
+    ?>
+    <a href="<?php echo $breadcrumb['href']; ?>" title="Продажа <?php echo $breadcrumb['text']; ?> купить в ГОРОД-СТРАНА цена"><?php echo $breadcrumb['text']; ?></a>
+    <?php 
+      } else { 
+      echo $breadcrumb['text']; 
+      } 
+    } ?>
   </div>
   <div class="product-info">
     <?php if ($thumb || $images) { ?>
@@ -21,7 +29,7 @@
     </div>
     <?php } ?>
     <div class="right">
-	<h1><?php echo $heading_title; ?></h1>
+	
       <div class="description">
         <?php if ($manufacturer) { ?>
         <span><?php echo $text_manufacturer; ?></span>
@@ -237,15 +245,16 @@
         <br />
         <?php } ?>
         <?php } ?>
+		
       </div>
       <?php } ?>
       <div class="cart">
-        <div><?php echo $text_qty; ?>
-          <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
+        <div><?php //echo $text_qty; ?>
+		<!--количество-->
+          <!--<input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />-->
           <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
-          &nbsp;
-          <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
-          <a id="fast_order" href="#fast_order_form" class="button" />Быстрый заказ</a>
+          <div style="margin-bottom: 15px; margin-left: 12%;""><input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" /></div>
+          <div  style="margin-left: 12%;"><a id="fast_order" href="#fast_order_form" class="button" />Быстрый заказ</a></div>
           <div style="display:none">
             <div id="fast_order_form">
               <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
@@ -267,20 +276,22 @@
               </div>
             </div>
           </div>
-          <span>&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;</span>
-          <span class="links"><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br />
-            <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></span>
+		  <!--сравнение-->
+          <!--<span>&nbsp;&nbsp;<?php //echo $text_or; ?>&nbsp;&nbsp;</span>
+          <span class="links"><a onclick="addToWishList('<?php //echo $product_id; ?>');"><?php //echo $button_wishlist; ?></a><br />
+            <a onclick="addToCompare('<?php //echo $product_id; ?>');"><?php// echo $button_compare; ?></a></span>
         </div>
-        <?php if ($minimum > 1) { ?>
+        <?php /*if ($minimum > 1) { ?>
         <div class="minimum"><?php echo $text_minimum; ?></div>
-        <?php } ?>
+        <?php } */?>-->
       </div>
       <?php if ($review_status) { ?>
       <div class="review">
-        <div>
+        <div>Рейтинг:&nbsp;&nbsp;
           <img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;
+		  <!--Отзывы--><!--
           <a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a>
+          <a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a>-->
         </div>
         <div>
           <!-- Added parameter article -->
@@ -290,12 +301,13 @@
           <?php } ?>
           <!-- Added parameter article -->
         </div>
+		<!--Соц Сети--><!-- 
         <div class="share">
-		<!-- AddThis Button BEGIN -->
+		<!-- AddThis Button BEGIN 
 			<div class="share42init" data-image="<?php echo $thumb; ?>"></div>
 			<script type="text/javascript" src="catalog/view/javascript/jquery/share42/share42.js"></script> 
-		<!-- AddThis Button END --> 
-        </div>
+		<!-- AddThis Button END 
+        </div>--> 
       </div>
       <?php } ?>
     </div>

@@ -42,6 +42,10 @@
   <!-- js -->
   <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
+  <script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js"></script>
+  
   <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
   <script type="text/javascript" src="catalog/view/javascript/fast_order.js"></script>
   <?php foreach ($scripts as $script) { ?>
@@ -102,7 +106,14 @@
                 <span class="life">+38 (063) 0 100 500</span><br />
                 <p class="mts">+38 (000) 000 0000</p>
                 <!-- CallBack -->
-                <div id="callme">Обратный звонок</div>  
+                <div id="callme">
+                  <!-- Callme-->
+                  <a class="callme" href="./index.php?route=module/callme/open">Обратный звонок</a>
+                  <script type="text/javascript"><!--
+                  $('.callme').colorbox({iframe:true,width: 300,height: 445});
+                  //--></script>
+                  <!-- END Callme-->
+                </div>
                 <!-- CallBack -->
               </div>
             </div>

@@ -112,7 +112,8 @@ function getURLVar(key) {
 
 function addToCart(product_id, quantity) {
 	quantity = typeof(quantity) != 'undefined' ? quantity : 1;
-
+    modPopupCart.open();
+    
 	$.ajax({
 		url: 'index.php?route=checkout/cart/add',
 		type: 'post',

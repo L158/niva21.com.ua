@@ -102,14 +102,15 @@
 	min-width: 120px;
 }
 #menu > ul > li ul > li > a:hover {
-	background: #bbe6f1 url("/image/data/arrow.png") no-repeat 170px 13px;
+	background: url("/image/data/arrow.png") no-repeat 170px 13px;
+	background-color: #bbe6f1 ;
+	border-bottom: 1px solid #CACACA;
 }
 #menu > ul > li > div > ul > li > a, #menu > ul > li > div > ul > li > div > ul > li > a {
 	color: #21798E;
 }
-
 /* Level 3 */
-#menu > ul > li > div > ul > li {
+#menu > ul > li > div > ul > li:hover {
 }
 #menu > ul > li > div > ul > li > div {
 	position: absolute;
